@@ -1,6 +1,6 @@
 package cl.jpvs.m6efphonenewanonymous.data.remote
 
-data class Phone (
+data class Phone(
     val id:Int,
     val name :String,
     val price: Int,
