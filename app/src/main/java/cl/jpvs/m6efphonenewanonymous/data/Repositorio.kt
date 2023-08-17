@@ -10,8 +10,8 @@ class Repositorio(private val phoneApi : PhoneApi, private val phoneDao: PhoneDa
         val response = phoneApi.getData() //aca captura los datos
 
         if (response.isSuccessful) {  //se obtuvieron correctamente
-            val message = response.body()!!.message  // Solo obtiene el mensaje, no tiene status
-
+            val message = response.body()!!.message
+            // Solo obtiene el mensaje, no tiene status
             val keys = message.keys
             keys.forEach {
                 val phoneEntity = PhoneEntity(it)
