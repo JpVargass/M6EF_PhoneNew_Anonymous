@@ -5,15 +5,16 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import cl.jpvs.m6efphonenewanonymous.data.local.detail.list.PhoneEntity
+import cl.jpvs.m6efphonenewanonymous.data.local.detail.PhoneEntity
+
 
 @Dao
 interface PhoneDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertPhone(phoneEntity : PhoneEntity)  //insertar datos de Phone
+    suspend fun insertPhones(phoneEntity : List<PhoneEntity>)  //insertar datos de Phone
 
     @Query("Select * from table_phone order by id ASC")  //consular a la tabla y ordenar ascendente
-    fun getPhone() : LiveData<List<PhoneEntity>>
+    fun getPhones() : LiveData<List<PhoneEntity>>
 
 }

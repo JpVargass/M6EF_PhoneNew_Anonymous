@@ -1,4 +1,5 @@
-package cl.jpvs.m6efphonenewanonymous.data.local.detail.list
+package cl.jpvs.m6efphonenewanonymous.data.local.detail
+
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
