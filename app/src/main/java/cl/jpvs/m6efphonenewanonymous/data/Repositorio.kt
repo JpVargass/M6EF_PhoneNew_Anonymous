@@ -11,7 +11,7 @@ class Repositorio(private val phoneApi : PhoneApi, private val phoneDao: PhoneDa
     fun getPhonesList() : LiveData<List<PhoneEntity>>  = phoneDao.getPhones()
     suspend fun ObtenerPhones() {
        try{
-        val response = phoneApi.getDataPhone()
+        val response = phoneApi.getDataPhone() //consume info de la Api
 
         if (response.isSuccessful) {
             val resp = response.body()
