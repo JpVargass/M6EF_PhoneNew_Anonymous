@@ -16,6 +16,15 @@ import android.os.Bundle
   [x] Entity
   [x] DAO
 [] Repositorio
+[ ] Vistas
+  [] ViewModel
+[] Fragmento Listado
+  [] xml [ ] recyclerview
+  [] codigo
+[]  Acvtivy_main.xlm - framlayou
+[] agregar item.xml
+[] Agregar Navigation "nav_phone"
+
 
 
 

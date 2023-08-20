@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 class PhoneViewModel (applicaction: Application):AndroidViewModel(applicaction) {
      private val repositorio: Repositorio
 
+     suspend fun phoneLiveData() = repositorio.ObtenerPhones()
      init {
          val api = PhoneRetrofit.getPhoneRetrofit()
          val phoneDatabase = PhoneDatabase.getDatabase(applicaction).getPhoneDao()
