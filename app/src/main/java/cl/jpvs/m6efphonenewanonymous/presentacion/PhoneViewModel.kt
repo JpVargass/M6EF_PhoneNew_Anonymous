@@ -8,16 +8,16 @@ import cl.jpvs.m6efphonenewanonymous.data.local.PhoneDatabase
 import cl.jpvs.m6efphonenewanonymous.data.remote.PhoneRetrofit
 import kotlinx.coroutines.launch
 
-class PhoneViewModel (applicaction: Application):AndroidViewModel(applicaction) {
+class PhoneViewModel (application: Application):AndroidViewModel(application) {
      private val repositorio: Repositorio
 
-     suspend fun phoneLiveData() = repositorio.ObtenerPhones()
+     fun phoneLiveData() = repositorio.getPhonesList()
      init {
          val api = PhoneRetrofit.getPhoneRetrofit()
-         val phoneDatabase = PhoneDatabase.getDatabase(applicaction).getPhoneDao()
+         val phoneDatabase = PhoneDatabase.getDatabase(application).getPhoneDao()
          repositorio = Repositorio(api, phoneDatabase)
      }
     fun getAllPhones() = viewModelScope.launch {
-        repositorio.getPhonesList()
+        repositorio.getPhones()
     }
 }

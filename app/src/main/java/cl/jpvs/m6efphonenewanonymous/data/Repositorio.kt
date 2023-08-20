@@ -9,7 +9,7 @@ import cl.jpvs.m6efphonenewanonymous.data.remote.PhoneApi
 // el repositorio es el administrador de los datos
 class Repositorio(private val phoneApi : PhoneApi, private val phoneDao: PhoneDao) {
     fun getPhonesList() : LiveData<List<PhoneEntity>>  = phoneDao.getPhones()
-    suspend fun ObtenerPhones() {
+    suspend fun getPhones() {
        try{
         val response = phoneApi.getDataPhone() //consume info de la Api
 

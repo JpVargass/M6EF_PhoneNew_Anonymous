@@ -1,5 +1,6 @@
 package cl.jpvs.m6efphonenewanonymous.data.remote
 
+import cl.jpvs.m6efphonenewanonymous.data.local.detail.PhoneDetailEntity
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -10,12 +11,12 @@ interface PhoneApi {
     suspend fun getDataPhone(): Response<List<Phone>>
 
  //para obtener Detalle
- /* por implementar
+ /* por implementar*/
 
 
     @GET("details/{id}")
-    suspend fun getDetallephone(@Path("id")id:Int): Response<PhoneDetalle>
+    suspend fun getDetallePhone(@Path("id")id:Int): Response<PhoneDetailEntity>
 
-*/
+
 
 }
