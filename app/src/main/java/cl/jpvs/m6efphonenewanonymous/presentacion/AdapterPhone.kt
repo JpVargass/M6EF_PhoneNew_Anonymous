@@ -4,7 +4,9 @@ package cl.jpvs.m6efphonenewanonymous.presentacion
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import cl.jpvs.m6efphonenewanonymous.R
 import cl.jpvs.m6efphonenewanonymous.data.local.detail.PhoneEntity
 import cl.jpvs.m6efphonenewanonymous.databinding.ItemPhoneListBinding
 import coil.load
@@ -66,6 +68,7 @@ private val listItemPhone = mutableListOf<PhoneEntity>()
             onePhone.cvItemphone.setOnClickListener{
                 bundle.putInt("id",itemPhone.id)
                 // navigation
+                Navigation.findNavController(onePhone.root).navigate(R.id.action_listPhoneFragment_to_fragment_DetailPhone)
             }
 
         }

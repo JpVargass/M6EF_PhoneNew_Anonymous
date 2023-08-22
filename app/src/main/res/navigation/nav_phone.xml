@@ -9,5 +9,14 @@
         android:id="@+id/listPhoneFragment"
         android:name="cl.jpvs.m6efphonenewanonymous.presentacion.ListPhoneFragment"
         android:label="fragment_list_phone"
-        tools:layout="@layout/fragment_list_phone" />
+        tools:layout="@layout/fragment_list_phone" >
+        <action
+            android:id="@+id/action_listPhoneFragment_to_fragment_DetailPhone"
+            app:destination="@id/fragment_DetailPhone" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_DetailPhone"
+        android:name="cl.jpvs.m6efphonenewanonymous.presentacion.Fragment_DetailPhone"
+        android:label="fragment__detail_phone"
+        tools:layout="@layout/fragment__detail_phone" />
 </navigation>

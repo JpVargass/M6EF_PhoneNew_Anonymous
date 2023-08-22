@@ -15,7 +15,7 @@ interface PhoneApi {
 
 
     @GET("details/{id}")
-    suspend fun getDetallePhone(@Path("id")id:Int): Response<PhoneDetailEntity>
+    suspend fun getDetailPhone(@Path("id")id:Int): Response<PhoneDetail>
 
 
 
